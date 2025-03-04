@@ -14,8 +14,8 @@ function getPlayerChoice(){
     place = prompt;
     return place("rock, paper or scissors");
 }
-
-console.log(getPlayerChoice());
+// console no longer needed but was helpfull
+//console.log(getPlayerChoice());
 // this is for a round for the game.
 function playRound(playerChoice, computerChoice) {
     // if human and computer choices were the same, its a tie
@@ -23,16 +23,16 @@ function playRound(playerChoice, computerChoice) {
         return 'tie';}  
     // if human is scissor and compter is paper human wins
     if (humanSelection === "scissors" && computerSelection === "paper"){
-            return 'you win';}
+            return 'you win',playerScore()+1;}
     // if human is rock and compter is scissors human wins       
     if (humanSelection === "rock" && computerSelection === "scissors"){
-            return 'you win';}
+            return 'you win',playerScore()+1;}
     // if human is paper and compter is rock human wins       
     if (humanSelection === "paper" && computerSelection === "rock"){
-            return 'you win';}
+            return 'you win',playerScore()+1;}
     // if its vice versa computer wins
     else {
-        return `You lose! ${computerSelection} beats ${humanSelection}`;
+        return `You lose! ${computerSelection} beats ${humanSelection}`,computerScore()+1;
                 }
   }
   // we define our getPlayerChoice function as variable and make it all to lower case or key insensitive.
@@ -47,6 +47,8 @@ function playRound(playerChoice, computerChoice) {
   
   playRound(humanSelection, computerSelection);
   console.log(playRound());
+
+
 //   function playGame(){
 //     for (let i = 0; i < 5; i++) {
 //         console.log(playRound());
