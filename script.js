@@ -3,10 +3,14 @@ console.log("Hello World");
 // const playerScore = 0;
 // const computerScore = 0;
 
-// function getComputerChoice(){
-//     const pick = ['rock', 'paper', 'scissors']
-// return pick [Math.floor (Math.random ()* pick.length)];
-// }
+//this function declairs the computer move
+function getComputerChoice(){
+    const picks = ["rock","paper","scissors"]
+    //math.random picks random characters from our variable "picks". Math.floor makes sure that the characters is not singular. picks.length targets the whole variable which in english the variable arrays.
+    return picks [Math.floor(Math.random()*picks.length)];
+    
+}
+console.log(getComputerChoice());
 
 // function getPlayerChoice(){
 //     place = prompt;
@@ -41,4 +45,5 @@ console.log("Hello World");
 //     }
 //   }
    
+
 
