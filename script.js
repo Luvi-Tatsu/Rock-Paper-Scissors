@@ -7,16 +7,18 @@ console.log("Hello World");
 function getComputerChoice(){
     const picks = ["rock","paper","scissors"]
     //math.random picks random characters from our variable "picks". Math.floor makes sure that the characters is not singular. picks.length targets the whole variable which in english the variable arrays.
-    return picks [Math.floor(Math.random()*picks.length)];
-    
+    return picks [Math.floor(Math.random()*picks.length)];  
 }
-console.log(getComputerChoice());
 
-// function getPlayerChoice(){
-//     place = prompt;
-//     return place("rock, paper or scissors");
-// }
-// // console.log(getPlayerChoice());
+console.log(getComputerChoice());
+// This function is for number 3, I put a function to promt a Players Choice
+function getPlayerChoice(){
+// Place is a variable for the prompt which the player will write to. its still not key insensitive
+    place = prompt;
+    return place("rock, paper or scissors");
+}
+
+console.log(getPlayerChoice());
 
 // function playRound(getPlayerChoice, getComputerChoice) {
 //     if (humanSelection === computerSelection){
