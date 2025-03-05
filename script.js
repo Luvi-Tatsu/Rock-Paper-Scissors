@@ -7,7 +7,6 @@ function getComputerChoice(){
     return picks [Math.floor(Math.random()*picks.length)];     
 }
 
-// This function is for number 3, I put a function to promt a Players Choice
 function getPlayerChoice(){
 // Place is a variable for the prompt which the player will write to. its still not key insensitive
     place = prompt;
@@ -31,7 +30,7 @@ function playRound(humanSelection, computerSelection) {
         return console.log (`You lose! ${computerSelection} beats ${humanSelection}`);
             }
   }
-  
+
   function score(){
     console.log(`Final Scores=> Player: ${playerScore} Computer: ${computerScore}`)
     if (computerScore > playerScore){
@@ -41,12 +40,13 @@ function playRound(humanSelection, computerSelection) {
     else{
         console.log("its a tie");}  
 }
+
 function playGame(){
     for (let i = 0; i < 5; i++){
         const humanSelection = getPlayerChoice().toLowerCase();
         const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
-}
+    }
 score();
 }
 
