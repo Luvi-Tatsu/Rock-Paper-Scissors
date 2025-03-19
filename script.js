@@ -121,33 +121,97 @@ rock.addEventListener('click', rockButtonClick);
     let rand = real(); 
     computerPrompt.textContent = `Computer Plays: ${rand}`;
     playRound("rock",rand);
-}
+    if (playRound("rock",rand) === 1){
+        playerScores ++;
+        scorePlayer.textContent = `Player Score: ${playerScores}`;
+        console.log('You Win');
+    }
+    if (playRound("rock",rand) === 0){
+        computerScores ++;
+        console.log (`You lose! ${rand} beats rock`);
+        scoreComputer.textContent = `Computer Score: ${computerScores}`;
+    }
+    if (playRound("rock",rand) === -1){
+        console.log('Tie')
+    }
+    winner();}
 
 // Click Paper
 paper.addEventListener('click', paperButtonClick);
 function paperButtonClick(e){
     let rand = real(); 
      computerPrompt.textContent = `Computer Plays: ${rand}`;
-    playRound("paper",rand);}
+    playRound("paper",rand);
+    if (playRound("paper",rand) === 1){
+        playerScores ++;
+        scorePlayer.textContent = `Player Score: ${playerScores}`;
+        console.log('You Win');
+    }
+    if (playRound("paper",rand) === 0){
+        computerScores ++;
+        console.log (`You lose! ${rand} beats paper`);
+        scoreComputer.textContent = `Computer Score: ${computerScores}`;
+    }
+    if (playRound("paper",rand) === -1){
+        console.log('Tie')
+    }
+    winner();
+    }
 
 // Click Scissor
 scissor.addEventListener('click', scissorButtonClick);
 function scissorButtonClick(e){
     let rand = real(); 
     computerPrompt.textContent = `Computer Plays: ${rand}`;
-    playRound("scissors",rand);}
+    playRound("scissors",rand);
+    if (playRound("scissors",rand) === 1){
+        playerScores ++;
+        scorePlayer.textContent = `Player Score: ${playerScores}`;
+        alert('You Win');
+    }
+    if (playRound("scissors",rand) === 0){
+        computerScores ++;
+        console.log (`You lose! ${rand} beats scissors`);
+        scoreComputer.textContent = `Computer Score: ${computerScores}`;
+    }
+    if (playRound("scissors",rand) === -1){
+        console.log('Tie')
+    }
+    winner();
+}
 
 
     function playRound(humanSelection, computerSelection) { 
             if (humanSelection === computerSelection){
-                return console.log('tie');
+                return -1;
             }  
             else if ((humanSelection === "scissors" && computerSelection === "paper")||
             (humanSelection === "rock" && computerSelection === "scissors")||
             (humanSelection === "paper" && computerSelection === "rock")){
-                return console.log('You Win');
+                
+                return 1;
                     }
             else {
-                return console.log (`You lose! ${computerSelection} beats ${humanSelection}`);
+                
+                return 0;
                     }
           }
+function winner (){
+    if(playerScores >= 5){
+        alert("Congratulations You Won!!!");
+        confirm("Play Again?");
+        window.location.reload();
+        
+    }
+    else if (computerScores >= 5){
+        alert("The Odds was Against You, Computer Won");
+        confirm("Play Again?");
+        window.location.reload();
+    }
+
+}
+
+if (playerScores === 5 || computerScores === 5){
+    
+}
+// if (!alert('Play Again')){window.location.reload()};
