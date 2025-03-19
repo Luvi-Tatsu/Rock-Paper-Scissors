@@ -1,0 +1,78 @@
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    background: #aaa;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #container {
+    background: white;
+    width: 480px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  }
+  
+  .gameHeader {
+    background-color: rgb(109, 231, 115);
+    text-align: center;
+    margin: 0px;
+    padding-top: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .userInterface{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(161, 177, 219, 0.795);
+    
+  }
+
+  button{
+    font-size:20px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    
+
+   
+  }
+  .playerSide{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(247, 247, 247);
+    flex: 1;
+    
+  }
+
+  .gameScore {
+    background-color: rgb(109, 231, 115);
+    text-align: center;
+    margin: 0px;
+    padding-top: 0;
+
+  }
+
+  .scoreInterface{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+  }
+
+  .computerPrompt{
+
+    margin: 10px;
+  }
+
+  .computerSide{
+    width: 60%;
+  }
