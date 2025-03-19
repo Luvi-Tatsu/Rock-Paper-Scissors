@@ -1,6 +1,6 @@
 console.log("Hello World");
 
-//this function declairs the computer move
+// //this function declairs the computer move
 function getComputerChoice(){
     const picks = ["rock","paper","scissors"]
     //math.random picks random characters from our variable "picks". Math.floor makes sure that the characters is not singular. picks.length targets the whole variable which in english the variable arrays.
